@@ -49,7 +49,7 @@ map = (function () {
         layer.setSelectionEvents({
             click: function(selection){
                 if (selection.feature) {
-                    layer._map.openPopup(L.popup().setLatLng(selection.leaflet_event.latlng).setContent(JSON.stringify(selection.feature.properties.id)));
+                    layer._map.openPopup(L.popup().setLatLng(selection.leaflet_event.latlng).setContent(JSON.stringify(selection.feature.properties.kind)));
                 }
             }
         });
