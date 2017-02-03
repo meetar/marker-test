@@ -50,17 +50,6 @@ layers:
                 order: function() { return feature.sort_rank; }
                 color: '#777'
                 width: 5
-    buildings:
-        data: { source: osm }
-        draw:
-            polygons:
-                order: function() { return feature.sort_rank; }
-                color: '#999'
-        extruded:
-            draw:
-                polygons:
-                    style: buildings
-                    extrude: function () { return feature.height > 0 || $zoom >= 16; }
     road_labels:
         data: { source: osm, layer: roads }
         filter: { name: true, aeroway: false, tunnel: false, railway: false, not: { kind: [rail, ferry] } }
@@ -81,5 +70,5 @@ layers:
                     font:
                         fill: white
                         weight: 100
-                        size: 11px
+                        size: 10px
                         family: Helvetica
